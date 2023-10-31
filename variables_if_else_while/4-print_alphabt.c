@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-int a = 97;
+int a = 96;
 
-while (a <= 122)
+while (a <= 121)
 {
+a++;
 if (a == 101 || a == 113)
 continue;
 putchar(a);
-a++;
 }
 putchar(10);
 return (0);
