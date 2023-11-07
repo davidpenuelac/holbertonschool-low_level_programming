@@ -19,6 +19,6 @@ while (c < (n - 1))
 printf("%d, ", a[c]);
 c++;
 }
-}
 printf("%d\n", a[c]);
+}
 }
