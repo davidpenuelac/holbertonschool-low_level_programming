@@ -14,7 +14,7 @@ int l = 0;
 while (str[l] != '\0')
 l++;
 if (l % 2 != 0)
-l = (l - 1) / 2;
+l = (l - 1) / 2 + 1;
 else
 l = l / 2;
 while (str[l] != '\0')
