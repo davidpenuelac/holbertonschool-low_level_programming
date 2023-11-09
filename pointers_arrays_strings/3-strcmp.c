@@ -10,15 +10,15 @@
 
 int _strcmp(char *s1, char *s2)
 {
-while ((*s1 != '\0') && (*s2 != '\0') && (*s1 == *s2))
+int c = 0;
+
+while ((*s1 != '\0') && (*s2 != '\0'))
 {
+c = *s1 - *s2;
+if (c != 0)
+break;
 s1++;
 s2++;
 }
-if (*s1 < *s2)
-return (-1);
-else if (*s1 > *s2)
-return (1);
-else
-return (0);
+return (c);
 }
