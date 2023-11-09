@@ -4,24 +4,27 @@
  * leet - Write a function that encodes a string into 1337.
  * @s: string
  *
- * return: Always 0.
+ * Return: Always 0.
  */
 char *leet(char *s)
 {
 char *a = s;
+char c[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+char n[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+int b;
 
 while (*s != '\0')
 {
-if ((*s == 'a') || (*s == 'A'))
-*s = '4';
-else if ((*s == 'e') || (*s == 'E'))
-*s = '3';
-else if ((*s == 'o') || (*s == 'O'))
-*s = '0';
-else if ((*s == 't') || (*s == 'T'))
-*s = '7';
-else if ((*s == 'l') || (*s == 'L'))
-*s = '1';
+b = 0;
+while (b < 10)
+{
+if (*s == c[b])
+{
+*s = n[b];
+break;
+}
+b++;
+}
 s++;
 }
 return (a);
