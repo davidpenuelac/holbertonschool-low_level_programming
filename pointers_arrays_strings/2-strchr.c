@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -16,5 +15,5 @@ if (*s == c)
 return (s);
 s++;
 }
-return (NULL);
+return (s);
 }
