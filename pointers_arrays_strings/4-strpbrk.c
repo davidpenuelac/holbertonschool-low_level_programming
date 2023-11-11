@@ -12,6 +12,8 @@ char *_strpbrk(char *s, char *accept)
 {
 int a;
 
+if (*accept == '\0')
+return (0);
 while (*s != '\0')
 {
 a = 0;
@@ -25,7 +27,5 @@ a++;
 }
 s++;
 }
-if (accept[a] == '\0')
 return (s);
-return (0);
 }
