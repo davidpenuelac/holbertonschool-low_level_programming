@@ -19,10 +19,17 @@ if (ndog == NULL)
 return (NULL);
 ndog->name = (char *)malloc(sizeof(name));
 if (ndog->name == NULL)
+{
+free(ndog);
 return (NULL);
+}
 ndog->owner = (char *)malloc(sizeof(owner));
 if (ndog->owner == NULL)
+{
+free(ndog->name);
+free(ndog);
 return (NULL);
+}
 ndog->name = strdup(name);
 ndog->age = age;
 ndog->owner = strdup(owner);
