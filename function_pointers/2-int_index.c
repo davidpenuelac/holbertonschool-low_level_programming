@@ -6,7 +6,7 @@
  * int_index - executes a function given as a parameter
  * @array: array
  * @size: size of the array
- * @cpm: function pointer
+ * @cmp: function pointer
  *
  * Return: Nothing.
  */
@@ -15,7 +15,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 int i = 0;
 
-if (size <= 0)
+if (size <= 0 || array == NULL || cpm == NULL)
 return (-1);
 while (i < size)
 {
