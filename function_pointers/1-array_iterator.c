@@ -17,6 +17,8 @@ size_t i = 0;
 
 if (array == NULL)
 return;
+else if (action == NULL)
+return;
 while (i < size)
 {
 action(array[i]);
