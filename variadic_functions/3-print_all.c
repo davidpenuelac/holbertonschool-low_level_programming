@@ -33,7 +33,7 @@ case 's': {
 char *s = va_arg(ar, char *);
 if (s == NULL)
 printf("%s(nil)", c);
-else 
+if (s != NULL)
 printf("%s%s", c, s);    
 break;
 }
