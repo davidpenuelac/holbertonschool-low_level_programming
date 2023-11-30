@@ -19,19 +19,24 @@ char *c = "";
 va_start(ar, format);
 while ((format[i] != '\0') && format)
 {
-if (format[i] == 'c')
+switch (format[i]) {
+case 'c':
 printf("%s%c", c, va_arg(ar, int));
-else if (format[i] == 'i')
+break;
+case 'i':
 printf("%s%d", c, va_arg(ar, int));
-else if (format[i] == 'f')
+break;
+case 'f':
 printf("%s%f", c, va_arg(ar, double));
-else if (format[i] == 's')
-{
+break;
+case 's': {
 char *s = va_arg(ar, char *);
 if (s == NULL)
 printf("%s(nil)", c);
-else
-printf("%s%s", c, s);
+else 
+printf("%s%s", c, s);    
+break;
+}
 }
 c = ", ";
 i++;
