@@ -35,7 +35,7 @@ char *s = va_arg(ar, char *);
 if (s == NULL)
 printf("%s(nil)", c);
 if (s != NULL)
-printf("%s%s", c, s);    
+printf("%s%s", c, s);
 break;
 }
 }
