@@ -19,7 +19,8 @@ char *c = "";
 va_start(ar, format);
 while ((format[i] != '\0') && format)
 {
-switch (format[i]) {
+switch (format[i])
+{
 case 'c':
 printf("%s%c", c, va_arg(ar, int));
 break;
