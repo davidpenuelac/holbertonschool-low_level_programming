@@ -11,13 +11,12 @@
  * Return: The value associated with the key, or NULL if wrong
  */
 
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int i;
 	hash_node_t *c;
 
 	if (!ht || !key || *key == '\0')
-	{
 		return (NULL);
 	i = key_index((unsigned char *)key, ht->size);
 	c = ht->array[i];
@@ -27,6 +26,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (c->value);
 		c = c->next;
 	}
-
 	return (NULL);
 }
